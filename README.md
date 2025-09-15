@@ -1,6 +1,6 @@
-# NGV DCAS SW Practice
+# Digital Twin SW Practice
 
-NGV DCAS를 위한 연습용 저장소로, ROS 노드 기초, Lanelet2 활용, 센서 시뮬레이션, 실제 센서 데이터 분석을 단계적으로 다룹니다.
+Digital Twin를 위한 연습용 저장소로, ROS 노드 기초, Lanelet2 활용, 센서 시뮬레이션, 실제 센서 데이터 분석을 단계적으로 다룹니다.
 
 ## 저장소 구조 (Repository Structure)
 
