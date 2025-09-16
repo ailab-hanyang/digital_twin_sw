@@ -28,7 +28,7 @@
   </node>
 
   <!-- 3) KinematicVehicleModelNode -->
-  <node pkg="ros_tutorial" type="kinematic_vehicle_model_node.py" name="kinematic_vehicle_model_node" output="screen">
+  <node pkg="ros_tutorial" type="kinematic_bicycle_model_node.py" name="kinematic_bicycle_model_node" output="screen">
     <param name="steering_command_topic" value="/steering_cmd"/>
     <param name="vehicle_state_topic" value="/vehicle/state"/>
     <param name="vehicle_marker_topic" value="/vehicle/marker"/>
