@@ -104,7 +104,7 @@ mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 
 # 저장소 클론
-git clone https://github.com/<your-org>/NGV_DCAS_SW_Practice.git
+git clone https://github.com/ailab-hanyang/digital_twin_sw.git
 
 # 빌드
 cd ..
