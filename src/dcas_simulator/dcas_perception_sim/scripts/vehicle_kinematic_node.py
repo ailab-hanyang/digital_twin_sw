@@ -143,21 +143,23 @@ class VehicleDynamicsNode:
             "map",
         )
 
-        # Publish visualization markers (arrow + text)
+        # Publish visualization markers (mesh + text)
         arr = MarkerArray()
-        arrow = Marker()
-        arrow.header.frame_id = "ego_frame"
-        arrow.header.stamp = rospy.Time.now()
-        arrow.ns = "vehicle"
-        arrow.id = 0
-        arrow.type = Marker.ARROW
-        arrow.action = Marker.ADD
-        arrow.scale.x = 2.0
-        arrow.scale.y = 0.3
-        arrow.scale.z = 0.3
-        arrow.color.r, arrow.color.g, arrow.color.b, arrow.color.a = 0.0, 1.0, 1.0, 1.0
-        arrow.pose.orientation.w = 1.0
-        arr.markers.append(arrow)
+        mesh = Marker()
+        mesh.header.frame_id = "ego_frame"
+        mesh.header.stamp = rospy.Time.now()
+        mesh.ns = "vehicle"
+        mesh.id = 0
+        mesh.type = Marker.MESH_RESOURCE
+        mesh.action = Marker.ADD
+        mesh.mesh_resource = "package://dcas_perception_sim/rviz/meshes/Ioniq5.stl"
+        mesh.scale.x = 1.0
+        mesh.scale.y = 1.0
+        mesh.scale.z = 1.0
+        mesh.color.r, mesh.color.g, mesh.color.b, mesh.color.a = 1.0, 1.0, 1.0, 1.0
+        mesh.pose.orientation.z = 1.0
+        mesh.pose.orientation.w = 0.0
+        arr.markers.append(mesh)
 
         text = Marker()
         text.header.frame_id = "ego_frame"
@@ -166,7 +168,7 @@ class VehicleDynamicsNode:
         text.id = 1
         text.type = Marker.TEXT_VIEW_FACING
         text.action = Marker.ADD
-        text.pose.position.z = 1.2
+        text.pose.position.z = 2.2
         text.scale.z = 0.7
         text.text = f"v={vx:.1f} m/s, steer={self.steer_deg_cmd:.1f} deg, thr={throttle:.2f}"
         text.color.r, text.color.g, text.color.b, text.color.a = 1.0, 1.0, 1.0, 1.0
