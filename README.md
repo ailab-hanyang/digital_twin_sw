@@ -143,3 +143,11 @@ jupyter lab
 - 많은 예제가 연습을 위해 설계되었습니다. 주석/빈칸을 채워보세요.
 - ROS와 Python 의존성을 분리 유지(Catkin 워크스페이스 vs. Python venv).
 
+## Option - vehicle model 시각화 in WSL2
+export LIBGL_ALWAYS_SOFTWARE=1
+export MESA_GL_VERSION_OVERRIDE=3.3COMPAT
+export MESA_GLSL_VERSION_OVERRIDE=330
+export DISPLAY=:0
+export WAYLAND_DISPLAY=wayland-0
+export XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
+export PULSE_SERVER=unix:/mnt/wslg/PulseServer
