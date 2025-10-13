@@ -1,0 +1,59 @@
+# Python
+###################
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+
+# ROS - Catkin
+###################
+# Generated folders
+build/
+devel/
+install/
+logs/
+
+# Other generated files
+*.catkin
+*.cmake
+CMakeLists.txt.user
+CATKIN_IGNORE
+
+
+# IDE - VSCode, etc.
+###################
+.vscode/
+.idea/
+*.DS_Store
+
+# catkin workspace
+.catkin_workspace
