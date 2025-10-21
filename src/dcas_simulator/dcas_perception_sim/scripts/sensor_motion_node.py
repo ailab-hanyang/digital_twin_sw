@@ -194,7 +194,7 @@ class MotionSensorNode:
         self.t_prev = t_now
         
         # TODO: 조향각에 노이즈 적용
-        angle = angle
+        angle = angle 
         
         # =================================================================
         # 4. 센서 데이터 발행

@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Status1
         - /GtMarkers1
         - /Sensor1
       Splitter Ratio: 0.5
@@ -27,7 +26,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: CameraImage
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -60,7 +59,7 @@ Visualization Manager:
           Marker Topic: /viz/env/buildings
           Name: Building
           Namespaces:
-            buildings_mesh: true
+            {}
           Queue Size: 100
           Value: true
         - Class: rviz/MarkerArray
@@ -68,7 +67,7 @@ Visualization Manager:
           Marker Topic: /viz/env/guardrails
           Name: GuardRail
           Namespaces:
-            guardrails: true
+            {}
           Queue Size: 100
           Value: true
         - Class: rviz/MarkerArray
@@ -76,7 +75,7 @@ Visualization Manager:
           Marker Topic: /viz/env/lanes
           Name: Lane
           Namespaces:
-            lanes_center: true
+            {}
           Queue Size: 100
           Value: true
         - Class: rviz/MarkerArray
@@ -84,7 +83,7 @@ Visualization Manager:
           Marker Topic: /viz/env/signs
           Name: TrafficSign
           Namespaces:
-            signs: true
+            {}
           Queue Size: 100
           Value: true
         - Class: rviz/MarkerArray
@@ -92,7 +91,7 @@ Visualization Manager:
           Marker Topic: /viz/env/traffic_lights
           Name: TrafficLight
           Namespaces:
-            traffic_lights: true
+            {}
           Queue Size: 100
           Value: true
         - Class: rviz/MarkerArray
@@ -100,7 +99,7 @@ Visualization Manager:
           Marker Topic: /viz/env/vehicles
           Name: OtherVehicle
           Namespaces:
-            vehicles: true
+            {}
           Queue Size: 100
           Value: true
         - Class: rviz/MarkerArray
@@ -108,8 +107,7 @@ Visualization Manager:
           Marker Topic: /viz/vehicle
           Name: EgoVehicle
           Namespaces:
-            vehicle: true
-            vehicle_text: true
+            {}
           Queue Size: 100
           Value: true
       Enabled: true
@@ -156,7 +154,7 @@ Visualization Manager:
           Marker Topic: /sensors/gnss/shadow_zones
           Name: GnssShadowZone
           Namespaces:
-            gnss_shadow_zone: true
+            {}
           Queue Size: 100
           Value: true
         - Alpha: 1
@@ -288,20 +286,19 @@ Visualization Manager:
           Marker Topic: /sensors/radar/fov
           Name: RadarFoV
           Namespaces:
-            radar_fov: true
-            radar_fov_edges: true
+            {}
           Queue Size: 100
           Value: true
         - Alpha: 1
           Class: rviz_plugin_tutorials/Imu
           Color: 204; 51; 204
-          Enabled: false
+          Enabled: true
           History Length: 1
           Name: Imu
           Queue Size: 10
           Topic: /sensors/imu/data
           Unreliable: false
-          Value: false
+          Value: true
       Enabled: true
       Name: Sensor
   Enabled: true
@@ -332,7 +329,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 76.84282684326172
+      Distance: 55.34420394897461
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -370,5 +367,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1920
-  X: 2
-  Y: -11
+  X: -32
+  Y: -13
