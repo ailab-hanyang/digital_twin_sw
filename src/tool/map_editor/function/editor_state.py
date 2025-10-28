@@ -155,5 +155,5 @@ class EditorState:
         self.next_surrounding_vehicle_id = 1
 
         # 저장 위치
-        self.results_root_dir = "/home/seheonha/git/NGV_DCAS_SW/src/tool/map_editor/results"
+        self.results_root_dir = "../results"        
         self.active_map_folder_name = "map_1"
