@@ -57,9 +57,6 @@ Lanelet2 설치 및 활용, 샘플 맵 데이터 사용 예제를 포함합니�
   ```
 - 추가 내용: `src/lanelet_tutorial/README_Lanelet.md`
 
-- map 다운로드 링크
-- https://drive.google.com/file/d/1ivu262WhXpmy73i-coyItZ5a0p32ldWD/view?usp=sharing
-
 ### 3) sensor_data_analysis — 실제 센서 데이터 처리
 IMU, GNSS, LiDAR, RADAR, Camera 등 실제 센서 데이터를 파싱/변환/시각화하는 Jupyter 노트북 모음입니다.
 - 노트북: `practice/1_dev_environment.ipynb` … `practice/6_camera.ipynb`
