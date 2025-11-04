@@ -24,6 +24,7 @@ Performance notes:
 import rospy
 import os
 import csv
+import math
 from dcas_msgs.msg import Object, ObjectArray
 from geometry_msgs.msg import Pose, Point, Quaternion, Vector3, Twist, Point32
 from visualization_msgs.msg import Marker, MarkerArray
@@ -148,7 +149,17 @@ class EnvBuildingPublisher:
                     building_obj = Object()
                     building_obj.header = building_object_array.header
                     
-                    
+                    # 건물 point가 항상 시계 방향으로 정렬되어 있음을 보장
+                    # 폴리곤의 중심점을 계산한 후 각 점의 atan2 각도를 기준으로 정렬,
+                    # atan2는 반시계(CW 반대) 방향으로 증가하므로 reverse=True로 정렬하면 시계 방향 순서로 정렬
+                    try:
+                        cx_sort = sum(point.x for point in building_points) / len(building_points)
+                        cy_sort = sum(point.y for point in building_points) / len(building_points)
+                        building_points.sort(key=lambda p: math.atan2(p.y - cy_sort, p.x - cx_sort), reverse=True)
+                    except Exception:
+                        # 계산 실패시 원래 순서 유지
+                        pass
+
                     # 폴리곤 점들로부터 건물 중심점(centroid) 계산
                     centroid_x = sum(building_point.x for building_point in building_points) / len(building_points)
                     centroid_y = sum(building_point.y for building_point in building_points) / len(building_points)
