@@ -76,6 +76,11 @@ class ControlNode:
             VehicleState,
             self.callback_vehicle_state
         )
+        rospy.Subscriber(
+            "/scc/target_speed",
+            Float32,
+            self.callback_target_speed
+        )
 
         # 타이머 (50Hz)
         self.timer = rospy.Timer(rospy.Duration(0.02), self.callback_timer)
@@ -89,6 +94,10 @@ class ControlNode:
     def callback_vehicle_state(self, msg):
         """차량 상태 콜백"""
         self.vehicle_state = msg
+
+    def callback_target_speed(self, msg):
+        """목표 속도 콜백"""
+        self.target_speed = msg.data
 
     def quaternion_to_yaw(self, quat):
         """쿼터니언을 yaw 각도로 변환"""

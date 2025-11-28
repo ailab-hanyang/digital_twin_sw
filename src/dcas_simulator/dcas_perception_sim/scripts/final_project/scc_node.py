@@ -63,12 +63,12 @@ class SCCNode:
 
         # Subscribers
         rospy.Subscriber(
-            "/sensors/lidar/points_noise",
+            "/sensors/lidar/points",
             PointCloud2,
             self.callback_lidar
         )
         rospy.Subscriber(
-            "/sensors/radar/points_noise",
+            "/sensors/radar/points",
             PointCloud2,
             self.callback_radar
         )
