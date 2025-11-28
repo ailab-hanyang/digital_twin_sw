@@ -20,6 +20,9 @@
     <param name="target_center_lane" value="1" />  <!-- 1: lane 0-1 사이, 2: lane 1-2 사이 -->
   </node>
 
+  <!-- SCC -->
+  <node pkg="dcas_perception_sim" type="scc_node.py" name="scc_node" output="screen" />
+
   <!-- Vehicle (optional) -->
   <group if="$(arg with_vehicle)">
     <node pkg="dcas_perception_sim" type="vehicle_kinematic_node.py" name="vehicle_kinematic_node" output="screen" />
